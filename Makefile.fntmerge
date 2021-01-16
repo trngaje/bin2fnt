@@ -1,0 +1,13 @@
+CFLAGS=-Wall -O6 
+LNFLAGS=
+SOURCES=fntmerge.c options.c
+OBJECTS=fntmerge.o options.o
+TARGET=fntmerge
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(LNFLAGS) $(OBJECTS) -o $(TARGET)
+
+

@@ -1,0 +1,13 @@
+CFLAGS=-Wall -O6 
+LNFLAGS=
+SOURCES=bin2fnt.c options.c
+OBJECTS=bin2fnt.o options.o
+TARGET=bin2fnt
+
+.c.o:
+	$(CC) $(CFLAGS) -c $<
+
+$(TARGET): $(OBJECTS)
+	$(CC) $(LNFLAGS) $(OBJECTS) -o $(TARGET)
+
+
